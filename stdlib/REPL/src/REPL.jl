@@ -74,10 +74,10 @@ include("docview.jl")
 
 answer_color(::AbstractREPL) = ""
 
-const JULIA_PROMPT = "julia> "
+const JULIA_PROMPT = "żbik> "
 const PKG_PROMPT = "pkg> "
 const SHELL_PROMPT = "shell> "
-const HELP_PROMPT = "help?> "
+const HELP_PROMPT = "zapytaj bartka> "
 
 mutable struct REPLBackend
     "channel for AST"
@@ -1002,7 +1002,7 @@ function setup_interface(
         on_enter = return_callback)
 
     # Setup help mode
-    help_mode = Prompt(contextual_prompt(repl, "help?> "),
+    help_mode = Prompt(contextual_prompt(repl, HELP_PROMPT),
         prompt_prefix = hascolor ? repl.help_color : "",
         prompt_suffix = hascolor ?
             (repl.envcolors ? Base.input_color : repl.input_color) : "",
