@@ -95,7 +95,7 @@ controlled with boolean keyword arguments:
 See also: [`VERSION`](@ref).
 """
 function versioninfo(io::IO=stdout; verbose::Bool=false)
-    println(io, "Julia Version $VERSION")
+    println(io, "Żbik Version $VERSION")
     if !isempty(Base.GIT_VERSION_INFO.commit_short)
         println(io, "Commit $(Base.GIT_VERSION_INFO.commit_short) ($(Base.GIT_VERSION_INFO.date_string))")
     end
