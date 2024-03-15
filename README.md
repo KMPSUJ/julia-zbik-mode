@@ -17,7 +17,7 @@ Welcome to zbikLang
 
 You can run
 
-    ./add_zbik_to_patk.sh
+    ./add-zbik-to-path.sh
 
 to automatically add `zbik` and `żbik` to $PATH
 
